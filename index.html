@@ -477,7 +477,122 @@
             </li>
           </ul>
         </div>
+        <div class="footer-subscribe-wrapper">
+          <form class="footer-subscribe-form">
+            <label class="subsribe-title" for="subscribe-input"
+              >Subscribe
+            </label>
+            <div class="subscribe-input-btn-wrapper">
+              <input
+                class="footer-subscribe-input"
+                id="subscribe-input"
+                type="email"
+                placeholder="E-mail"
+              />
+              <button class="subscribe-btn" type="submit">
+                Subscribe
+                <svg class="subscribe-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-subscribe-icon"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-    </footer>  
+    </footer>
+
+    <!-- Modal FORM -->
+
+    <div class="backdrop is-open">
+      <div class="modal-form-wrapper">
+        <button class="modal-close-btn" type="button">
+          <svg class="modal-form-close-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-btn"></use>
+          </svg>
+        </button>
+        <p class="modal-form-title">
+          Leave your contacts and we will call you back
+        </p>
+        <form class="modal-form">
+          <div class="modal-label-wrapper">
+            <label class="form-label" for="user-name">
+              Name
+              <div class="custom-input-icon-wrapper">
+                <input
+                  class="modal-form-input"
+                  type="text"
+                  id="user-name"
+                  required
+                />
+                <svg class="custom-text-input-icons" width="12" height="12">
+                  <use href="./images/icons.svg#icon-user"></use>
+                </svg>
+              </div>
+            </label>
+          </div>
+          <div class="modal-label-wrapper">
+            <label class="form-label" for="tel-nr">
+              Phone
+              <div class="custom-input-icon-wrapper">
+                <input
+                  class="modal-form-input"
+                  type="tel"
+                  id="tel-nr"
+                  required
+                />
+                <svg class="custom-text-input-icons" width="13" height="13">
+                  <use href="./images/icons.svg#icon-tel"></use>
+                </svg>
+              </div>
+            </label>
+          </div>
+          <div class="modal-label-wrapper">
+            <label class="form-label" for="email">
+              Email
+              <div class="custom-input-icon-wrapper">
+                <input
+                  class="modal-form-input"
+                  type="email"
+                  id="email"
+                  required
+                />
+                <svg class="custom-text-input-icons" width="16" height="12">
+                  <use href="./images/icons.svg#icon-email"></use>
+                </svg>
+              </div>
+            </label>
+          </div>
+          <div class="modal-label-wrapper">
+            <label class="form-label" for="user-comment"
+              >Comment
+              <textarea
+                class="modal-form-comment"
+                id="user-comment"
+                placeholder="Text input"
+              ></textarea>
+            </label>
+          </div>
+          <div class="modal-label-wrapper privacy-policy">
+            <label class="form-label" for="custom-checkbox">
+              <input
+                class="privacy-policy-checkbox visually-hidden"
+                type="checkbox"
+                name="privacy-checkbox"
+                id="custom-checkbox"
+                required
+              />
+              <span class="form-custom-checkbox">
+                <svg class="form-custom-checkbox-icon" width="8px" height="8px">
+                  <use href="./images/icons.svg#icon-checked"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a class="policy-link" href="#">Privacy Policy</a>
+            </label>
+          </div>
+          <button class="modal-submit-btn" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
