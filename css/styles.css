@@ -630,15 +630,18 @@ button {
 
 /** ======= Modal Form ======= */
 
-/* .backdrop {
+.backdrop {
     display: none;
+}
+
+.backdrop.is-open {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     background-color: var(--navy-blue-modal);
-    backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -655,7 +658,7 @@ button {
     border-radius: 4px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background-color: var(--dairy);
-} */
+}
 
 .modal-close-btn {
     position: absolute;
@@ -742,6 +745,7 @@ button {
     outline: transparent;
     border-radius: 4px;
     transition: border var(--animate);
+    padding-left: 38px;
 }
 
 .custom-input-icon-wrapper:focus-within .modal-form-input {

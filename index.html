@@ -515,52 +515,41 @@
         </p>
         <form class="modal-form">
           <div class="modal-label-wrapper">
-            <label class="form-label" for="user-name">
-              Name
-              <div class="custom-input-icon-wrapper">
-                <input
-                  class="modal-form-input"
-                  type="text"
-                  id="user-name"
-                  required
-                />
-                <svg class="custom-text-input-icons" width="12" height="12">
-                  <use href="./images/icons.svg#icon-user"></use>
-                </svg>
-              </div>
-            </label>
+            <label class="form-label" for="user-name"> Name </label>
+            <div class="custom-input-icon-wrapper">
+              <input
+                class="modal-form-input"
+                type="text"
+                id="user-name"
+                required
+              />
+              <svg class="custom-text-input-icons" width="12" height="12">
+                <use href="./images/icons.svg#icon-user"></use>
+              </svg>
+            </div>
           </div>
           <div class="modal-label-wrapper">
-            <label class="form-label" for="tel-nr">
-              Phone
-              <div class="custom-input-icon-wrapper">
-                <input
-                  class="modal-form-input"
-                  type="tel"
-                  id="tel-nr"
-                  required
-                />
-                <svg class="custom-text-input-icons" width="13" height="13">
-                  <use href="./images/icons.svg#icon-tel"></use>
-                </svg>
-              </div>
-            </label>
+            <label class="form-label" for="tel-nr"> Phone </label>
+            <div class="custom-input-icon-wrapper">
+              <input class="modal-form-input" type="tel" id="tel-nr" required />
+              <svg class="custom-text-input-icons" width="13" height="13">
+                <use href="./images/icons.svg#icon-tel"></use>
+              </svg>
+            </div>
           </div>
           <div class="modal-label-wrapper">
-            <label class="form-label" for="email">
-              Email
-              <div class="custom-input-icon-wrapper">
-                <input
-                  class="modal-form-input"
-                  type="email"
-                  id="email"
-                  required
-                />
-                <svg class="custom-text-input-icons" width="16" height="12">
-                  <use href="./images/icons.svg#icon-email"></use>
-                </svg>
-              </div>
-            </label>
+            <label class="form-label" for="email"> Email </label>
+            <div class="custom-input-icon-wrapper">
+              <input
+                class="modal-form-input"
+                type="email"
+                id="email"
+                required
+              />
+              <svg class="custom-text-input-icons" width="16" height="12">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </div>
           </div>
           <div class="modal-label-wrapper">
             <label class="form-label" for="user-comment"
@@ -595,4 +584,32 @@
       </div>
     </div>
   </body>
+
+  <!-- Modal Form ON/OFF-->
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const backdrop = document.querySelector('.backdrop');
+      const closeModalBtn = document.querySelector('.modal-close-btn');
+      const openModalBtn = document.querySelector('.order-button');
+
+      if (openModalBtn) {
+        openModalBtn.addEventListener('click', () => {
+          backdrop.classList.add('is-open');
+        });
+      }
+
+      if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', () => {
+          backdrop.classList.remove('is-open');
+        });
+      }
+
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && backdrop.classList.contains('is-open')) {
+          backdrop.classList.remove('is-open');
+        }
+      });
+    });
+  </script>
 </html>
